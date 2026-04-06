@@ -5,9 +5,6 @@
 
 "use strict";
 
-// ============================================
-// SECCIÓN 1: Constantes y datos del dominio
-// ============================================
 
 const DOMAIN_NAME = "Inventario de Instrumentos Musicales";
 const VALUE_LABEL = "precio";
@@ -55,33 +52,22 @@ const instrumentos = [
   },
 ];
 
-// ============================================
-// SECCIÓN 2: Función de formato
-// ============================================
+
 
 const formatearInstrumento = (instrumento) => {
   return `🎵 ${instrumento.nombre} | Tipo: ${instrumento.tipo} | Precio: COP ${instrumento.precio.toLocaleString("es-CO")} | Stock: ${instrumento.stock}`;
 };
 
-// ============================================
-// SECCIÓN 3: Función de cálculo (pura)
-// ============================================
 
 const calcularValorInventario = (precio, cantidad = 1) => {
   return precio * cantidad;
 };
 
-// ============================================
-// SECCIÓN 4: Función de validación
-// ============================================
+
 
 const esInstrumentoDisponible = (instrumento) => {
   return instrumento.disponible === true && instrumento.stock > 0;
 };
-
-// ============================================
-// SECCIÓN 5: Función con parámetro por defecto
-// ============================================
 
 const formatearConDefault = (
   valor,
@@ -91,9 +77,6 @@ const formatearConDefault = (
   return `${etiqueta}: ${moneda} ${valor.toLocaleString("es-CO")}`;
 };
 
-// ============================================
-// SECCIÓN 6: Reporte usando las funciones
-// ============================================
 
 console.log(`\n${"═".repeat(45)}`);
 console.log(`   REPORTE — ${DOMAIN_NAME}`);
