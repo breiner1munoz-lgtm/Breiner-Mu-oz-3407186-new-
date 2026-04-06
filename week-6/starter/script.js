@@ -37,14 +37,10 @@ const categories = ["cuerda", "percusión", "viento", "teclado"];
 const valueLabel = "precio en pesos colombianos";
 const formatCOP = (value) => `$${value.toLocaleString("es-CO")} COP`;
 
-// ============================================
-// SECCIÓN 2: Listado completo con for...of
-// ============================================
+
 console.log("=== LISTADO COMPLETO ===");
 
-// TODO: Usa for...of para imprimir cada elemento
-// Formato sugerido: "1. [nombre] — [categoría] — [valueLabel]: [value]"
-// Pista: usa una variable externa para el contador de número de línea
+
 let lineNumber = 0;
 
 for (const item of items) {
@@ -56,14 +52,10 @@ for (const item of items) {
 
 console.log("");
 
-// ============================================
-// SECCIÓN 3: Contadores por categoría
-// ============================================
+
 console.log("=== CONTEO POR CATEGORÍA ===");
 
-// TODO: Para cada categoría, cuenta cuántos elementos tiene
-// Pista: usa un for...of exterior (categorías) con un contador
-//        y un for...of interior (items) para contar
+
 
 for (const category of categories) {
   let count = 0;
@@ -77,9 +69,7 @@ for (const category of categories) {
 
 console.log("");
 
-// ============================================
-// SECCIÓN 4: Totales y promedio (acumulador)
-// ============================================
+
 console.log("=== ESTADÍSTICAS ===");
 
 let totalValue = 0;
@@ -88,7 +78,7 @@ for (const item of items) {
   totalValue += item.value;
 }
 
-// TODO: Calcula el promedio
+
 const averageValue = items.length > 0 ? totalValue / items.length : 0;
 
 console.log(`Total ${valueLabel}: ${formatCOP(totalValue)}`);
@@ -96,13 +86,10 @@ console.log(`Promedio ${valueLabel}: ${formatCOP(Number(averageValue.toFixed(1))
 
 console.log("");
 
-// ============================================
-// SECCIÓN 5: Máximo y mínimo
-// ============================================
+
 console.log("=== MÁXIMO Y MÍNIMO ===");
 
-// TODO: Variables para el máximo y mínimo
-// Pista: inicializa con items[0] si el array no está vacío
+
 let maxItem = items[0] ?? null;
 let minItem = items[0] ?? null;
 
@@ -123,13 +110,10 @@ if (items.length > 0) {
 
 console.log("");
 
-// ============================================
-// SECCIÓN 6: Reporte numerado con for clásico
-// ============================================
+
 console.log("=== REPORTE DETALLADO ===");
 
-// TODO: Usa for clásico para generar el reporte
-// Indica si cada elemento está sobre o bajo el promedio
+
 for (let i = 0; i < items.length; i++) {
   const item = items[i];
 
